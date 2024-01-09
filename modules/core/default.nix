@@ -40,8 +40,8 @@ in
       ++ [ (import ./wayland.nix) ]
       #++ [ (import ./virtualisation.nix) ]
       ++ [ (import ./obsidian.nix)]
-      ++ [ (import ./../../hosts/P72/hardware-configuration.nix) ]
-      ++ [ (import ./../../hosts/P72/default.nix) ]
+      ++ [ (import ./../../hosts/T480/hardware-configuration.nix) ]
+      ++ [ (import ./../../hosts/T480/default.nix) ]
     ;
   };
 }
