@@ -21,6 +21,8 @@
     config.modules = {
         tmux.enable = true;
         waybar.enable = true;
+        waybarsetting.enable = true;
+        waybarstyle.enable = true;
         codium.enable = true;
         hyprland.enable = true;
         hyprconf.enable = true;
