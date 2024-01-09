@@ -28,7 +28,8 @@ in
       T480 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-         [ (import ./hardware.nix) ]
+         [ nixos-hardware.nixosModules.lenovo-thinkpad-t480 ]
+      ++ [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
       ++ [ (import ./program.nix) ]
