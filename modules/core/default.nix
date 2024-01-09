@@ -37,7 +37,6 @@ in
       ++ [ (import ./services.nix) ]
       ++ [ (import ./system.nix) ]
       ++ [ (import ./user.nix) ]
-      ++ [ (import ./neo4j.nix) ]
       ++ [ (import ./wayland.nix) ]
       #++ [ (import ./virtualisation.nix) ]
       ++ [ (import ./obsidian.nix)]
