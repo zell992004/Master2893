@@ -1,19 +1,12 @@
 { pkgs, ... }: {
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking = {
     hostName = "P72";
     networkmanager.enable = true;
     firewall.enable = false;
-  };
-
-  hardware = {
-      nvidia = {
-        modesetting.enable = true;
-        powerManagement.enable = true;
-        open = false;
-        nvidiaSettings = true;
-        };
   };
 
    services.xserver = {
