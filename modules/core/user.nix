@@ -20,12 +20,13 @@
       programs.home-manager.enable = true;
     };
   };
-
+  
+  # only manage user groups here for simplicity
   users.users = {
     "zell" = {
     isNormalUser = true;
     description = "Pete";
-    extraGroups = [ "networkmanager" "wheel" "docker" "mlocate" "neo4j"];
+    extraGroups = [ "networkmanager" "wheel" "mlocate" "libvirtd"];
     shell = pkgs.zsh;
     };
 };

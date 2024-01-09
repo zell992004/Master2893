@@ -25,6 +25,16 @@ in{
   environment.systemPackages = with pkgs; [
     wget
     git
+
+    # Vm Packages
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
+    virtiofsd
   ];
 
   time.timeZone = "America/New_York";
