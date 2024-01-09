@@ -80,6 +80,11 @@ config = mkIf cfg.enable {
           active_opacity = 0.8500;
           inactive_opacity = 0.76;
           drop_shadow = 0
+            blur {
+              enabled = true
+              size = 2
+              passes = 2
+            }
       }
 
 
