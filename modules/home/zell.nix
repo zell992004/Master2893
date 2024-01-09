@@ -39,5 +39,6 @@
         package.enable = true;
         gaming.enable = true;
         gtk.enable = true;
+        firefox.enable = true;
     };
 }
