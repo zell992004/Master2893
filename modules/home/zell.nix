@@ -23,6 +23,8 @@
         waybar.enable = true;
         codium.enable = true;
         hyprland.enable = true;
+        hyprconf.enable = true;
+        hyprvar.enable = true;
         git.enable = true;
         foot.enable = true;
         swaylock.enable = true;
