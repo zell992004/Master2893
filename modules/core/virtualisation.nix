@@ -1,14 +1,14 @@
 {config,  pkgs, ...}:
 {
-  servicse.spice-vdagentd.enable = true;
+  services.spice-vdagentd.enable = true;
   virtualisation = {
+    spiceUSBRedirection.enable = true;
     libvirtd = {
-      spiceUSBRedirection.enable = true;
       enable = true;
       qemu = {
         swtpm.enable = true;
         ovmf.enable = true;
         };
     };
-  }
+  };
 }
