@@ -1,10 +1,10 @@
 { pkgs, config, lib, ... }:
 with lib;
   let
-  cfg = config.modules.vscode;
+  cfg = config.modules.codium;
   
   in {
-  options.modules.vscode = {enable = mkEnableOption "vscode";};
+  options.modules.codium = {enable = mkEnableOption "codium";};
   config = mkIf cfg.enable {
   programs.vscode = {
     enable = true;
