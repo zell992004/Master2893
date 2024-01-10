@@ -12,13 +12,17 @@ in{
       "position" = "top";
       modules-left = [
         "custom/launcher"
-        "wlr/workspaces"
         "temperature"
         "idle_inhibitor"
       ];
       modules-center = [
         "clock"
       ];
+        "hyprland/window" = {
+          "max-lenght" = "200";
+          "sperate-outputs" = true;
+        };
+      
       modules-right = [
         "pulseaudio"
         "pulseaudio#microphone"
@@ -53,7 +57,7 @@ in{
         "format" = " ﴔ ";
         "tooltip" = false;
       };
-      "wlr/workspaces" = {
+      "hyprland/workspaces" = {
         "format" = "{icon}";
         "on-click" = "activate";
       };

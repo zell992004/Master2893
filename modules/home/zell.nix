@@ -41,5 +41,6 @@
         gaming.enable = true;
         gtk.enable = true;
         firefox.enable = true;
+        scripts.enable = true;
     };
 }
