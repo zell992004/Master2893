@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -25,5 +25,10 @@
     };
   };
 services.gvfs.enable = true;
-#services.gnome.core-utilities.enable = false;
+
+
+#home-manager items
+home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
+     "eDP-1,1920x1080,0x0,1"
+     ];
 }
