@@ -12,10 +12,7 @@ config = mkIf cfg.enable {
       $mainMod = SUPER
      # monitor = ,highrr,auto,1
      # monitor = ,highres,auto,1
-     monitor=eDP-1,3840x2160,0x0,1
-     monitor=HDMI-A-1,1920x1080,3840x0, 1
-     monitor=DP-6,1920x1080,3840x0, 1
-     monitor=DP-4,1920x1080,-1920x0,1
+
      
       #TODO Add swipe gesture for workspaces
 

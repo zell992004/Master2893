@@ -26,8 +26,7 @@
         waybarstyle.enable = true;
         codium.enable = true;
         hyprland.enable = true;
-        hyprconfg14.enable = false;
-        hyprconfp72.enable = true;
+        hyprconfig.enable = true;
         hyprvar.enable = true;
         git.enable = true;
         foot.enable = true;

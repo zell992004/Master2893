@@ -26,4 +26,13 @@
 services.gvfs.enable = true;
 services.hardware.bolt.enable = true;
 #services.gnome.core-utilities.enable = false;
+
+#Hyprland display fixes
+
+home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
+     "eDP-1,3840x2160,0x0,1"
+     "HDMI-A-1,1920x1080,3840x0, 1"
+     "DP-6,1920x1080,3840x0, 1"
+     "DP-4,1920x1080,-1920x0,1"
+];
 }
