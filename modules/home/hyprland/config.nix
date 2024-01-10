@@ -1,9 +1,9 @@
 { inputs, config, lib, ... }:
 with lib;
 let
-  cfg = config.modules.hyprconfp72;
+  cfg = config.modules.hyprconfig;
 in{
-options.modules.hyprconfp72 = { enable = mkEnableOption "hyprconfp72"; };
+options.modules.hyprconfig = { enable = mkEnableOption "hyprconfig"; };
 config = mkIf cfg.enable {
 
 

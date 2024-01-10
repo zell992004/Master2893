@@ -18,7 +18,7 @@
   outputs = { self, nixpkgs, nixos-hardware, ... } @ inputs: {
 
     nixosConfigurations = import ./modules/core/default.nix {
-      inherit self nixpkgs inputs nixos-hardware;
+      inherit self nixpkgs inputs nixos-hardware ;
     };
   };
 }
