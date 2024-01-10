@@ -8,7 +8,6 @@
     networkmanager.enable = true;
     firewall.enable = false;
   };
-
    services.xserver = {
     enable = true;
     layout = "us";
