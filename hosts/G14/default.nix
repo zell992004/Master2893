@@ -4,7 +4,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking = {
-    hostName = "P72";
+    hostName = "G14";
     networkmanager.enable = true;
     firewall.enable = false;
   };
