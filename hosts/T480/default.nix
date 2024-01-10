@@ -7,7 +7,7 @@
   boot.initrd.kernelModules = [ "nvidia" ];
 
   networking = {
-    hostName = "P72";
+    hostName = "T480";
     networkmanager.enable = true;
     firewall.enable = false;
   };
@@ -38,5 +38,9 @@
   };
 services.gvfs.enable = true;
 services.hardware.bolt.enable = true;
-#services.gnome.core-utilities.enable = false;
+
+#home-manager items
+home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
+     "eDP-1,1920x1080,0x0,1"
+     ];
 }

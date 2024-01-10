@@ -45,9 +45,9 @@ config = mkIf cfg.enable {
 
 
       general {
-          gaps_in = 6
-          gaps_out = 10
-          border_size = 2
+          gaps_in = 3
+          gaps_out = 5
+          border_size = 1
           col.active_border = rgba(595959ff)
           col.inactive_border = rgba(00140e10)
           apply_sens_to_raw = 1
@@ -74,8 +74,8 @@ config = mkIf cfg.enable {
 
       decoration {
           rounding = 0
-          active_opacity = 0.8500;
-          inactive_opacity = 0.76;
+          active_opacity = 0.9000;
+          inactive_opacity = 0.50;
           drop_shadow = 0
             blur {
               enabled = true
