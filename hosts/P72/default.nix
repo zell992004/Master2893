@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -25,8 +25,6 @@
   };
 services.gvfs.enable = true;
 services.hardware.bolt.enable = true;
-#services.gnome.core-utilities.enable = false;
-
 #Hyprland display fixes
 
 home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
@@ -34,5 +32,12 @@ home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "HDMI-A-1,1920x1080,1920x0, 1"
      "DP-5,1920x1080,3840x0, 1"
      "DP-4,1920x1080,-1920x0,1"
-];
+      ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }
