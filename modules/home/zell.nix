@@ -41,10 +41,5 @@
         gaming.enable = true;
         gtk.enable = true;
         firefox.enable = true;
-        toggle-animation.enable = true;
-        toggle-blur.enable = true;
-        toggle-opacity.enable = true;
-        wall-change.enable = true;
-        wallpaper-picker.enable = true;
     };
 }

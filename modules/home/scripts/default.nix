@@ -63,7 +63,7 @@ cfg = config.modules.scripts;
     fi
   '';
   wallpaper-picker = pkgs.writeShellScriptBin "wallpaper-picker" ''
-    wallpaper_folder=$HOME/Pictures/wallpapers
+    wallpaper_folder=$HOME/Master2893/backgrounds
     wallpaper_location="$(ls $wallpaper_folder | wofi -n --show dmenu)"
     if [[ -d $wallpaper_folder/$wallpaper_location ]]; then
         wallpaper_temp="$wallpaper_location"
