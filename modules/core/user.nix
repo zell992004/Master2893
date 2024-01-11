@@ -19,8 +19,14 @@
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;
     };
+    users.felicia = {
+      imports = [ (import ./../home/felicia.nix) ];
+      home.username = "zell";
+      home.homeDirectory = "/home/felicia";
+      home.stateVersion = "23.11";
+      programs.home-manager.enable = true;
+    };
   };
-  
   # only manage user groups here for simplicity
   users.users = {
     "zell" = {
@@ -30,5 +36,13 @@
     shell = pkgs.zsh;
     };
 };
-  nix.settings.allowed-users = [ "zell"];
+  users.users = {
+    "felicia" = {
+    isNormalUser = true;
+    description = "felicia";
+    extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
+    };
+};
+  nix.settings.allowed-users = [ "zell" "felicia"];
 }
