@@ -34,7 +34,6 @@ in
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
       ++ [ (import ./program.nix) ]
-      ++ [ (import ./../home/package/python.nix) ]
       ++ [ (import ./security.nix) ]
       ++ [ (import ./services.nix) ]
       ++ [ (import ./system.nix) ]
@@ -76,6 +75,9 @@ in
       ++ [ (import ./services.nix) ]
       ++ [ (import ./system.nix) ]
       ++ [ (import ./user.nix) ]
+      ++ [ (import ./wayland.nix) ]
+      ++ [ (import ./virtualisation.nix) ]
+      ++ [ (import ./obsidian.nix)]
       ++ [ (import ./../../hosts/AIO3475/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/AIO3475/default.nix) ]
     ;
