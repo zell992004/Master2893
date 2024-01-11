@@ -17,7 +17,7 @@
     ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
-    ++ [ import inputs.sops-nix.homeManagerModules.sops]
+    ++ [ sops-nix.homeManagerModules.sops]
     ++ [ (import ./scripts)]
     ;
     config.modules = {
