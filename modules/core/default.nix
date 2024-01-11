@@ -1,5 +1,5 @@
 {inputs, nixpkgs, self, nixos-hardware, ...}:
-let system = "x86_63-linux";
+let system = "x86_64-linux";
 pkgs = import nixpkgs {
   inherit system;
   config.allowUnfree = true;
@@ -10,8 +10,7 @@ in
   P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-         [ (inputs.sops-nix.nixosModules.sops) ]
-      ++ [ nixos-hardware.nixosModules.lenovo-thinkpad-p52 ]
+         [ nixos-hardware.nixosModules.lenovo-thinkpad-p52 ]
       ++ [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
@@ -26,7 +25,7 @@ in
       ++ [ (import ./../../hosts/P72/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/P72/default.nix) ]
     ;
-  };
+    };
       T480 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
