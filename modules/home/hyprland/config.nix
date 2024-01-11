@@ -26,10 +26,9 @@ config = mkIf cfg.enable {
           env = GBM_BACKEND,nvidia-drm
           env = __GLX_VENDOR_LIBRARY_NAME,nvidia
           env = LIBVA_DRIVE_NAME,nvidia
-          touchpad {
           natural_scroll = false
+         touchpad {
           disable_while_typing = true
-          natrual_scroll = true
     }
       }
 
