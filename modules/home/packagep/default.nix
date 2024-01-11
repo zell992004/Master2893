@@ -2,16 +2,15 @@
 , pkgs
 , config
 , lib
-, python3
 , ...
 }: 
   
   with lib;
     let
-      cfg = config.modules.package;
+      cfg = config.modules.packagep;
     in {
       
-    options.modules.package = { enable = mkEnableOption "package"; };
+    options.modules.packagep = { enable = mkEnableOption "packagep"; };
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # programming
