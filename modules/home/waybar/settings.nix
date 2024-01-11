@@ -14,14 +14,12 @@ in{
         "custom/launcher"
         "temperature"
         "idle_inhibitor"
+        "hyprland/workspaces" 
+
       ];
       modules-center = [
         "clock"
       ];
-        "hyprland/window" = {
-          "max-lenght" = "200";
-          "sperate-outputs" = true;
-        };
       
       modules-right = [
         "pulseaudio"

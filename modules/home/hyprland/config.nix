@@ -28,6 +28,8 @@ config = mkIf cfg.enable {
           env = LIBVA_DRIVE_NAME,nvidia
           touchpad {
           natural_scroll = false
+          disable_while_typing = true
+          natrual_scroll = true
     }
       }
 
@@ -41,6 +43,7 @@ config = mkIf cfg.enable {
           enable_swallow = true
           swallow_regex =
           focus_on_activate = true
+          vrr = 1
       }
 
 
