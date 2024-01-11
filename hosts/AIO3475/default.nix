@@ -15,7 +15,7 @@
     videoDrivers = [ "amd" ];
     displayManager.lightdm.enable = true;
     desktopManager.deepin.enable = true;
-    };
+    
     
     libinput = {
       enable = true;
@@ -23,7 +23,7 @@
         accelProfile = "flat";
       };
     };
-  };
+   };
 services.gvfs.enable = true;
 
 

@@ -21,7 +21,7 @@
     };
     users.felicia = {
       imports = [ (import ./../home/felicia.nix) ];
-      home.username = "zell";
+      home.username = "felicia";
       home.homeDirectory = "/home/felicia";
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;
