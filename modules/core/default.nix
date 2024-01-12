@@ -22,6 +22,7 @@ in
       ++ [ (import ./wayland.nix) ]
       ++ [ (import ./virtualisation.nix) ]
       ++ [ (import ./obsidian.nix)]
+      ++ [ (import ./sops.nix)]
       ++ [ (import ./../../hosts/P72/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/P72/default.nix) ]
     ;
