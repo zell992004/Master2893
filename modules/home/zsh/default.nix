@@ -30,6 +30,7 @@ in {
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
       nrs = "sudo nixos-rebuild switch --flake ~/Master2893/.#";
       fl = "cd ~/Flakes/ && v";
+      vmnetstart = "sudo virsh net-start default";
     };
   };
   };
