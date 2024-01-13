@@ -17,6 +17,7 @@
     ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
+    ++ [ (import ./barrier)]
     ++ [ (import ./scripts)]
     ;
     config.modules = {
@@ -27,5 +28,6 @@
         packagef.enable = true;
         gaming.enable = true;
         firefox.enable = true;
+        barrier.enable = true;
     };
 }
