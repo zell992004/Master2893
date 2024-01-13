@@ -25,7 +25,7 @@ in{
   environment.systemPackages = with pkgs; [
     wget
     git
-
+    barrier
     # Vm Packages
     virt-manager
     virt-viewer

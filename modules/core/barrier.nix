@@ -1,4 +1,4 @@
-{config, lib, ...}:
+{pkgs, config, lib, ...}:
 with lib;
 let cfg = config.modules.barrier;
 in {
@@ -8,7 +8,6 @@ in {
       enable = true;
       enableCrypto = false;
       enableDragDrop = true;
-      name = "felicia"
-    }
-  }
+    };
+  };
 }
