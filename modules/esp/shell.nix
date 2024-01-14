@@ -12,7 +12,7 @@ pkgs.mkShell {
     flex
     bison
     gperf
-    pkgconfig
+    pkg-config
 
     cmake
 
