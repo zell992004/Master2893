@@ -38,6 +38,7 @@
       bore-cli
       discord
       eza
+      obsidian
     ];
     };
 }
