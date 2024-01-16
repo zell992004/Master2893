@@ -31,6 +31,7 @@ in {
       nrs = "sudo nixos-rebuild switch --flake ~/Master2893/.#";
       fl = "cd ~/Flakes/ && v";
       vmnetstart = "sudo virsh net-start default";
+      pwnconnect = "~/Master2893/modules/home/scripts/pwnconnect.sh~";
     };
   };
   };

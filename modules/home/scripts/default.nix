@@ -73,6 +73,7 @@ cfg = config.modules.scripts;
         exit 1
     fi
   '';
+  
 in {
   options.modules.scripts = {enable = mkEnableOption "scripts";};
   config = mkIf cfg.enable {
