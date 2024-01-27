@@ -39,6 +39,7 @@
       discord
       eza
       obsidian
+      waynergy
     ];
     };
 }
