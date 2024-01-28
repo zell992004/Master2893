@@ -1,6 +1,12 @@
-{ config, lib, pkgs, ... }:
 {
- wsl.enable = true;
- wsl.defaultUser = "zell";
- wsl.wslConf.network.hostname = "zellwsl";
+  pkgs,
+  username,
+  ...
+}: {
+  wsl = {
+    enable = true;
+    defaultUser = "zell";
+    startMenuLaunchers = true;
+    nativeSystemd = true;
+  };
 }
