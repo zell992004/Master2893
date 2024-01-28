@@ -40,11 +40,11 @@ home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "DP-5,1920x1080,3840x0, 1"
      "DP-4,1920x1080,-1920x0,1"
       ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
+ # hardware.nvidia = {
+ #   modesetting.enable = true;
+ #   powerManagement.enable = false;
+ #   open = false;
+ #   nvidiaSettings = true;
+ #   package = config.boot.kernelPackages.nvidiaPackages.stable;
+ # };
 }
