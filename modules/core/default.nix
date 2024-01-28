@@ -85,7 +85,7 @@ in
    wsl = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      ++ [ (import ./program.nix) ]
+         [ (import ./program.nix) ]
       ++ [ (import ./security.nix) ]
       ++ [ (import ./services.nix) ]
       ++ [ (import ./system.nix) ]
