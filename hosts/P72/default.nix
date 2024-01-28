@@ -12,10 +12,17 @@
     enable = true;
     layout = "us";
     videoDrivers = [ "nvidia" ];
-    displayManager.autoLogin = {
-      enable = true;
-      user = "zell";
+    displayManager.defaultSession = "xfce"
     };
+     desktopManager = {
+      xterm.enable = false;
+      xfce= {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
+          windowManager.i3.enable = true;
+
     libinput = {
       enable = true;
       mouse = {
