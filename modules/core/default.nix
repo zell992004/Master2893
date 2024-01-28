@@ -92,6 +92,7 @@ in
       ++ [ (import ./user.nix) ]
       ++ [ (import ./../../hosts/wsl/default.nix) ]
       ++ [ inputs.nixos-wsl.nixosModules.wsl ]
+      ++ [ (import ./../../hosts/wsl/hardware-configuration.nix) ]
     ;
   };
 }
