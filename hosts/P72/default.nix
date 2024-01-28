@@ -12,17 +12,10 @@
     enable = true;
     layout = "us";
     videoDrivers = [ "nvidia" ];
-     desktopManager = {
-      xterm.enable = false;
-      xfce= {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
-     };
-      displayManager.defaultSession = "xfce";
-      windowManager.i3.enable = true;
-
+    displayManager.autoLogin = {
+      enable = true;
+      user = "zell";
+    };
     libinput = {
       enable = true;
       mouse = {
@@ -40,11 +33,11 @@ home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "DP-5,1920x1080,3840x0, 1"
      "DP-4,1920x1080,-1920x0,1"
       ];
- # hardware.nvidia = {
- #   modesetting.enable = true;
- #   powerManagement.enable = false;
- #   open = false;
- #   nvidiaSettings = true;
- #   package = config.boot.kernelPackages.nvidiaPackages.stable;
- # };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }
