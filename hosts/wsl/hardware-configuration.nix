@@ -27,18 +27,18 @@
     };
 
   fileSystems."/mnt/wslg" =
-    { device = "none";
+    { device = "/dev/disk/by-uuid/edca773b-4feb-44f0-b638-aed2d0908c5e";
       fsType = "tmpfs";
     };
 
   fileSystems."/mnt/wslg/distro" =
-    { device = "";
-      fsType = "none";
+    { device = "/dev/disk/by-uuid/edca773b-4feb-44f0-b638-aed2d0908c5e";
+      fsType = "ext4";
       options = [ "bind" ];
     };
 
   fileSystems."/usr/lib/wsl/lib" =
-    { device = "none";
+    { device = "n/dev/disk/by-uuid/edca773b-4feb-44f0-b638-aed2d0908c5e";
       fsType = "overlay";
     };
 
