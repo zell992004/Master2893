@@ -82,7 +82,7 @@ in
       ++ [ (import ./../../hosts/AIO3475/default.nix) ]
     ;
   };
-   wsl = nixpkgs.lib.nixosSystem {
+   wslG14 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
          [ (import ./program.nix) ]
