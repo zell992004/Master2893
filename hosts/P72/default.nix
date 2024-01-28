@@ -12,8 +12,6 @@
     enable = true;
     layout = "us";
     videoDrivers = [ "nvidia" ];
-    displayManager.defaultSession = "xfce"
-    };
      desktopManager = {
       xterm.enable = false;
       xfce= {
@@ -21,7 +19,9 @@
         noDesktop = true;
         enableXfwm = false;
       };
-          windowManager.i3.enable = true;
+     };
+      displayManager.defaultSession = "xfce";
+      windowManager.i3.enable = true;
 
     libinput = {
       enable = true;
