@@ -85,13 +85,13 @@ in
    wsl = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      ++ [ (import ./program.nix) ]
+         [ (import ./program.nix) ]
       ++ [ (import ./security.nix) ]
       ++ [ (import ./services.nix) ]
       ++ [ (import ./system.nix) ]
       ++ [ (import ./user.nix) ]
       ++ [ (import ./../../hosts/wsl/default.nix) ]
-      ++ [ <nixos-wsl/modules> ]
+      ++ [ nixos-wsl.modules ]
     ;
   };
 }

@@ -12,6 +12,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-wsl = {
+      url = "github:nix-community/NixOs-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   
 
