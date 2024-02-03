@@ -1,6 +1,6 @@
 { inputs, config, lib, pkgs, ... }: {
   imports =
-       [ inputs.nimvim.homeManagerModules.nixvim ]
+       [ inputs.nixvim.homeManagerModules.nixvim ]
     ++ [ (import ./waybar) ]
     ++ [ (import ./firefox) ]
     ++ [ (import ./codium) ]
@@ -19,6 +19,7 @@
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
+    ++ [ (import ./nixvim)]
     ;
     config.modules = {
         tmux.enable = true;
@@ -43,5 +44,6 @@
         gtk.enable = true;
         firefox.enable = true;
         scripts.enable = true;
+        nixvim.enable = true;
     };
 }
