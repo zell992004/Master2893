@@ -23,7 +23,7 @@
   
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... } @ inputs: {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+    packages.x86_64-linux.default = home-manager.defaultPackage.x86_64-linux;
     homeConfigurations = {
     	zell = home-manager.lib.homeManagerConfiguration {
 	pkgs = import nixpkgs { system = "x86_64-linux"; };

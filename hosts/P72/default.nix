@@ -10,7 +10,7 @@
   };
    services.xserver = {
     enable = true;
-    layout = "us";
+    xkb.layout = "us";
     videoDrivers = [ "nvidia" ];
     displayManager.autoLogin = {
       enable = true;
