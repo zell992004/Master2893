@@ -13,16 +13,23 @@ in {
   config = mkIf cfg.enable {
     programs.nixvim = {
         enable = true;
+        plugins = {
+          lightline.enable = true;
+          telescope.enable = true;
+          nix.enable = true;
+
+        };
         extraPlugins = with pkgs.vimPlugins; [
           vim-nix
+          gruvbox
+          nerdtree
         ];
-        colorschemes.gruvbox.enable = true;
+        colorscheme = "gruvbox";
         options = {
           number = true;
           relativenumber = true;
           shiftwidth = 2;
         };
-    };
-    
+    }; 
   };
 }
