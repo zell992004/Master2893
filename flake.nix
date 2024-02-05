@@ -27,7 +27,7 @@
     homeConfigurations = {
     	zell = home-manager.lib.homeManagerConfiguration {
 	pkgs = import nixpkgs { system = "x86_64-linux"; };
-	modules = [ ./module/home/zell.nix ];
+	modules = [./modules/home/zell.nix ];
 	};
 };
     nixosConfigurations = import ./modules/core/default.nix {
