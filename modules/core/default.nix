@@ -82,18 +82,4 @@ in
       ++ [ (import ./../../hosts/AIO3475/default.nix) ]
     ;
   };
-   wslG14 = nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit self inputs; };
-    modules =
-         [ (import ./program.nix) ]
-      ++ [ (import ./security.nix) ]
-      ++ [ (import ./services.nix) ]
-      ++ [ (import ./system.nix) ]
-      ++ [ (import ./user.nix) ]
-      ++ [ (import ./obsidian.nix)]
-      ++ [ (import ./../../hosts/wsl/default.nix) ]
-      ++ [ inputs.nixos-wsl.nixosModules.wsl ]
-      ++ [ (import ./../../hosts/wsl/hardware-configuration.nix) ]
-    ;
-  };
 }
