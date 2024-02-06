@@ -1,6 +1,7 @@
 { inputs, config, lib, pkgs, ... }: {
   imports =
-      [ (import ./waybar) ]
+       [ inputs.nixvim.homeManagerModules.nixvim ]
+    ++ [ (import ./waybar) ]
     ++ [ (import ./firefox) ]
     ++ [ (import ./codium) ]
     ++ [ (import ./hyprland) ]
@@ -18,8 +19,10 @@
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
+    ++ [ (import ./nixvim)]
     ;
     config.modules = {
+        nixvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
         waybarsetting.enable = true;
