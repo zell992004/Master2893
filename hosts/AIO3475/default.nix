@@ -11,7 +11,7 @@
 
    services.xserver = {
     enable = true;
-    xkb.layout = "us";
+    layout = "us";
     videoDrivers = [ "amd" ];
     displayManager.lightdm.enable = true;
     desktopManager.deepin.enable = true;

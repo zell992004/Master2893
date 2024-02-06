@@ -11,7 +11,7 @@
 
    services.xserver = {
     enable = true;
-    xkb.layout = "us";
+    layout = "us";
     videoDrivers = [ "nvidia" ];
     desktopManager = {
       xterm.enable = false;
