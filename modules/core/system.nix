@@ -30,14 +30,14 @@ in{
     git
     barrier
     # Vm Packages
-    virt-manager
-    virt-viewer
-    spice
-    spice-gtk
-    spice-protocol
-    win-virtio
-    win-spice
-    virtiofsd
+  #  virt-manager
+  #  virt-viewer
+  #  spice
+  #  spice-gtk
+  #  spice-protocol
+  #  win-virtio
+  #  win-spice
+  #  virtiofsd
   ];
 
   time.timeZone = "America/New_York";
