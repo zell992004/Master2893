@@ -30,6 +30,7 @@ in{
     git
     barrier
     # Vm Packages
+    virtualbox
   #  virt-manager
   #  virt-viewer
   #  spice
