@@ -10,7 +10,8 @@ in
   P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-         [ nixos-hardware.nixosModules.lenovo-thinkpad-p52]
+      [ nixos-hardware.nixosModules.lenovo-thinkpad-p52]
+      ++ [ inputs.sops-nix.nixosModules.sops ]
       ++ [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]

@@ -2,7 +2,6 @@
   programs.dconf.enable = true;
   programs.zsh.enable = true;
   programs.tmux.enable = true;
-  programs.nixvim.enable = true;
   programs.xwayland.enable = true;
   programs.gnupg.agent = {
     enable = true;

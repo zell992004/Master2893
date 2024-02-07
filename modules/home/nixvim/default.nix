@@ -17,7 +17,11 @@ in {
           lightline.enable = true;
           telescope.enable = true;
           nix.enable = true;
-        };
+          treesitter = {
+            enable = true;
+            ensureInstalled = "all";
+            };
+          };
         extraPlugins = with pkgs.vimPlugins; [
           vim-nix
           gruvbox
@@ -29,7 +33,14 @@ in {
           relativenumber = true;
           shiftwidth = 2;
         };
-    };
+        keymaps = [
+          {
+            action = "<cmd>Telescope live_grep<CR>";
+            key = "<leader>g";
+          }
+        ];
+
+      };
     
   };
 }
