@@ -13,7 +13,10 @@ in {
     sops = {
       age.keyFile = "/home/zell/.config/sops/age/keys.txt";
       defaultSopsFile = ../../../secrets/secrets.yaml;
-      secrets."myservice/my_subdir/my_secret" = {}; 
+      secrets."myservice/my_subdir/my_secret" = {};
+      age.generateKey = true;
+      defaultSymlinkPath = "/run/user/1000/secrets";
+      defaultSecretsMountPoint = "/run/user/1000/secrets.d";
     };
   };
 }
