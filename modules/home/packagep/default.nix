@@ -40,6 +40,7 @@
       eza
       obsidian
       waynergy
+      sops
     ];
     };
 }
