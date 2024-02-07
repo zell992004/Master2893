@@ -23,6 +23,7 @@ in{
   };
 
   environment.systemPackages = with pkgs; [
+    sops
     wget
     git
     barrier
