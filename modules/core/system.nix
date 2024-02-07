@@ -21,6 +21,8 @@ in{
       options = "--delete-older-than 7d";
     };
   };
+  
+ # systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
 
   environment.systemPackages = with pkgs; [
     sops
