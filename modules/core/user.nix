@@ -32,7 +32,7 @@
     "zell" = {
     isNormalUser = true;
     description = "Pete";
-    extraGroups = [ "networkmanager" "wheel" "mlocate" "libvirtd"];
+    extraGroups = [ "networkmanager" "wheel" "mlocate" "libvirtd" "vboxusers"];
     shell = pkgs.zsh;
     };
 };

@@ -22,7 +22,6 @@ in{
     };
   };
   
- # systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
 
   environment.systemPackages = with pkgs; [
     sops
@@ -31,14 +30,13 @@ in{
     barrier
     # Vm Packages
     virtualbox
-  #  virt-manager
-  #  virt-viewer
-  #  spice
-  #  spice-gtk
-  #  spice-protocol
-  #  win-virtio
-  #  win-spice
-  #  virtiofsd
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    libguestfs
+    virtiofsd
   ];
 
   time.timeZone = "America/New_York";
