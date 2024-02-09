@@ -28,15 +28,6 @@ in{
     wget
     git
     barrier
-    # Vm Packages
-    virtualbox
-    virt-manager
-    virt-viewer
-    spice
-    spice-gtk
-    spice-protocol
-    libguestfs
-    virtiofsd
   ];
 
   time.timeZone = "America/New_York";

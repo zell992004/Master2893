@@ -1,6 +1,7 @@
 {config,  pkgs, ...}:
 {
-   virtualisation = {
+  nixpkgs.config.virtualbox.enableExtensionPack = true;
+  virtualisation = {
     virtualbox = {
       guest.enable = true;
       host = {

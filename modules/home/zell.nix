@@ -20,12 +20,14 @@
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
-    ++ [ (import ./nixvim)]
+   # ++ [ (import ./nixvim)]
+    ++ [ (import ./lazyvim)]
     ++ [ (import ./sops)]
     ;
     config.modules = {
         sops-nix.enable = true;
-        nixvim.enable = true;
+   #     nixvim.enable = true;
+        lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
         waybarsetting.enable = true;
