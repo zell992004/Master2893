@@ -10,7 +10,8 @@ in
   P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-         [ nixos-hardware.nixosModules.lenovo-thinkpad-p52]
+      [ nixos-hardware.nixosModules.lenovo-thinkpad-p52]
+      ++ [ (import ./vbox.nix)]
       ++ [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
@@ -58,7 +59,7 @@ in
       ++ [ (import ./system.nix) ]
       ++ [ (import ./user.nix) ]
       ++ [ (import ./wayland.nix) ]
-      ++ [ (import ./virtualisation.nix) ]
+    #  ++ [ (import ./virtualisation.nix) ]
       ++ [ (import ./obsidian.nix)]
       ++ [ (import ./../../hosts/G14/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/G14/default.nix) ]
@@ -76,7 +77,6 @@ in
       ++ [ (import ./system.nix) ]
       ++ [ (import ./user.nix) ]
       ++ [ (import ./wayland.nix) ]
-      ++ [ (import ./virtualisation.nix) ]
       ++ [ (import ./obsidian.nix)]
       ++ [ (import ./../../hosts/AIO3475/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/AIO3475/default.nix) ]

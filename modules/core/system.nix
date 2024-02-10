@@ -21,20 +21,13 @@ in{
       options = "--delete-older-than 7d";
     };
   };
+  
 
   environment.systemPackages = with pkgs; [
+    sops
     wget
     git
     barrier
-    # Vm Packages
-    virt-manager
-    virt-viewer
-    spice
-    spice-gtk
-    spice-protocol
-    win-virtio
-    win-spice
-    virtiofsd
   ];
 
   time.timeZone = "America/New_York";

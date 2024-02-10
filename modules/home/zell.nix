@@ -1,6 +1,8 @@
 { inputs, config, lib, pkgs, ... }: {
   imports =
-      [ (import ./waybar) ]
+       [ inputs.sops-nix.homeManagerModules.sops ]
+    ++ [ inputs.nixvim.homeManagerModules.nixvim ]
+    ++ [ (import ./waybar) ]
     ++ [ (import ./firefox) ]
     ++ [ (import ./codium) ]
     ++ [ (import ./hyprland) ]
@@ -18,8 +20,14 @@
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
+   # ++ [ (import ./nixvim)]
+    ++ [ (import ./lazyvim)]
+    ++ [ (import ./sops)]
     ;
     config.modules = {
+        sops-nix.enable = true;
+   #     nixvim.enable = true;
+        lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
         waybarsetting.enable = true;

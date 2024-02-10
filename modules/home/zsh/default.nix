@@ -15,6 +15,11 @@ in {
     enableCompletion = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
+    initExtra = ''
+      if [[ -o interactive ]]; then
+      export GITHUB_TOKEN=$(cat /run/user/1000/secrets/myservice/my_subdir/my_secret)
+      fi
+    '';
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
