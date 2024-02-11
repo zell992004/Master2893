@@ -10,7 +10,11 @@ let
 in {
   options.modules.lazyvim = { enable = mkEnableOption "lazyvim";};
   config = mkIf cfg.enable {
+
+  programs.lazygit.enable = true;
+
   programs.neovim = {
+    enable = true;
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
@@ -51,7 +55,11 @@ in {
           nvim-lspconfig
           nvim-notify
           nvim-spectre
-          nvim-treesitter
+          nvim-treesitter-parsers.regex
+          nvim-treesitter-parsers.bash
+          nvim-treesitter-parsers.markdown
+          nvim-treesitter-parsers.markdown_inline
+          nvim-treesitter.withAllGrammars
           nvim-treesitter-context
           nvim-treesitter-textobjects
           nvim-ts-autotag
@@ -120,6 +128,19 @@ in {
         paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
           c
           lua
+          bash
+          markdown_inline
+          markdown
+          regex
+          nix
+          python
+          xml
+          yaml
+          vimdoc
+          java
+          http 
+          html
+          dockerfile
         ])).dependencies;
       };
     in

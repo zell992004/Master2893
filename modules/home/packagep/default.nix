@@ -39,8 +39,12 @@
       discord
       eza
       obsidian
-      waynergy
+      libcxxStdenv
       sops
+      fd
+      gcc
+      tree-sitter
+      nodejs
     ];
     };
 }

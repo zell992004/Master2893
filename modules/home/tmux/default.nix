@@ -8,7 +8,8 @@ config = mkIf cfg.enable {
 programs.tmux ={
   enable = true;
  # shell = "${pkgs.zsh}/bin/sh";
-  terminal = "tmux-256color";
-  };
+  terminal = "screen-256color";
+  escapeTime = 10;
+ };
 };
 }
