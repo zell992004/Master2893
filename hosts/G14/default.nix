@@ -31,11 +31,4 @@ services.gvfs.enable = true;
 home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "eDP-1,1920x1080,0x0,1"
      ];
-hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
 }
