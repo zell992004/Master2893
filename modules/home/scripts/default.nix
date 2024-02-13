@@ -25,17 +25,6 @@ cfg = config.modules.scripts;
         hyprctl --batch "keyword animations:enabled 1"
     fi
   '';
-  push = pkgs.writeShellScriptBin "push" ''
-    git_directory=$PWD/.git
-    if [[ -d $git_directory ]];then
-      git add .
-      read -p "Enter commit name: " commit_name
-      git commit -m "$commit_name"
-      git push
-    else
-      echo "Git wasn't initialized here."
-    fi
-  '';
   toggle-blur = pkgs.writeShellScriptBin "toggle-blur" ''
     blur_val=$(hyprctl getoption decoration:blur | grep int)
     echo "$blur_val"
@@ -85,7 +74,6 @@ in {
     toggle-animation
     toggle-blur
     toggle-opacity
-    push
   ];
   }; 
 }

@@ -217,7 +217,7 @@ config = mkIf cfg.enable {
       exec-once = swww init && swaylock && notify-send 'Hey $USER, Welcome back' && load-env 
       exec-once = wl-paste --type text --watch cliphist store && wl-paste --type image --watch cliphist store && mako &
       exec-once = waybar &
-      exec-once = nohup /home/zell/Master/backgrounds/swww_randomize.sh home/zell/Master/backgrounds > output.log 2>&1 &
+      exec-once = nohup ~/Master/backgrounds/swww_randomize.sh ~/Master/backgrounds > output.log 2>&1 &
 
     ";
   };

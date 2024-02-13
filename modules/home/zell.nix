@@ -1,7 +1,7 @@
 { inputs, config, lib, pkgs, ... }: {
   imports =
-       [ inputs.sops-nix.homeManagerModules.sops ]
-    ++ [ inputs.nixvim.homeManagerModules.nixvim ]
+#       [ inputs.sops-nix.homeManagerModules.sops ]
+       [ inputs.nixvim.homeManagerModules.nixvim ]
     ++ [ (import ./waybar) ]
     ++ [ (import ./firefox) ]
     ++ [ (import ./codium) ]
@@ -22,10 +22,10 @@
     ++ [ (import ./scripts)]
    # ++ [ (import ./nixvim)]
     ++ [ (import ./lazyvim)]
-    ++ [ (import ./sops)]
+   # ++ [ (import ./sops)]
     ;
     config.modules = {
-        sops-nix.enable = true;
+   #     sops-nix.enable = true;
    #     nixvim.enable = true;
         lazyvim.enable = true;
         tmux.enable = true;
