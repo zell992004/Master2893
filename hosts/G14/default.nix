@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -9,20 +9,14 @@
     firewall.enable = false;
   };
 
-   services.xserver = {
+     services.xserver = {
     enable = true;
     layout = "us";
-    videoDrivers = [ "nvidia" ];
-    desktopManager = {
-      xterm.enable = false;
-      xfce= {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
+    videoDrivers = ["nvidia"];
+    displayManager.autoLogin = {
+      enable = true;
+      user = "zell";
     };
-    displayManager.defaultSession = "xfce";
-    windowManager.i3.enable = true;
     libinput = {
       enable = true;
       mouse = {
@@ -37,4 +31,11 @@ services.gvfs.enable = true;
 home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "eDP-1,1920x1080,0x0,1"
      ];
+hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }

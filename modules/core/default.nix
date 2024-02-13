@@ -30,9 +30,7 @@ in
   server = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      [ nixos-hardware.nixosModules.lenovo-thinkpad-p52]
-      ++ [ (import ./vbox.nix)]
-      ++ [ (import ./hardware.nix) ]
+         [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
       ++ [ (import ./program.nix) ]
