@@ -10,6 +10,12 @@ programs.tmux ={
  # shell = "${pkgs.zsh}/bin/sh";
   terminal = "screen-256color";
   escapeTime = 10;
- };
+  plugins = (with pkgs; [
+      tmuxPlugins.better-mouse-mode
+    ]);
+  extraConfig = ''
+  set-option -g mouse on
+  '';
+};
 };
 }

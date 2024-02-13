@@ -75,6 +75,7 @@ in {
           vim-illuminate
           vim-startuptime
           which-key-nvim
+          vim-tmux-navigator
           { name = "LuaSnip"; path = luasnip; }
           { name = "catppuccin"; path = catppuccin-nvim; }
           { name = "mini.ai"; path = mini-nvim; }
