@@ -12,7 +12,7 @@
      services.xserver = {
     enable = true;
     layout = "us";
-    videoDrivers = ["nvidia"];
+    videoDrivers = ["nvidia" ];
     displayManager.autoLogin = {
       enable = true;
       user = "zell";
@@ -26,7 +26,22 @@
   };
 services.gvfs.enable = true;
 
-
+hardware = {
+  nvidia = {
+    powerManagement.enable = false;
+    open = false;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+};
+  
+  opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+   #   extraPackages = with pkgs; [
+   #   amdvlk
+   #   ];
+    };
+};
 #home-manager items
 home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
      "eDP-1,1920x1080,0x0,1"

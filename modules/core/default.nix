@@ -68,7 +68,7 @@ in
     specialArgs = { inherit self inputs; };
     modules =
          [ nixos-hardware.nixosModules.asus-zephyrus-ga401]
-      ++ [ (import ./hardware.nix) ]
+ #     ++ [ (import ./hardware.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
       ++ [ (import ./program.nix) ]
