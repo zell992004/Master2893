@@ -38,7 +38,7 @@
       bore-cli
       discord
       eza
-      obsidian
+   #   obsidian
       libcxxStdenv
       sops
       fd

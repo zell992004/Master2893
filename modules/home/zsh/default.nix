@@ -16,6 +16,7 @@ in {
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     prezto.tmux = {
+        enable = true;
         autoStartLocal = true;
         autoStartRemote = true;
         defaultSessionName = "home";

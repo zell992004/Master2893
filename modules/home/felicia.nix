@@ -26,6 +26,7 @@
         starship.enable= true;
         packagef.enable = true;
         gaming.enable = true;
+        tmux.enable = true;
         firefox.enable = true;
     };
 }

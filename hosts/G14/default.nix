@@ -28,9 +28,16 @@ services.gvfs.enable = true;
 
 hardware = {
   nvidia = {
+    modesetting.enable = true;
     powerManagement.enable = false;
     open = false;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    nvidiaSettings = true;
+    prime = {
+		# Make sure to use the correct Bus ID values for your system!
+		amdgpuBusId = "PCI:4:0:0";
+		nvidiaBusId = "PCI:1:0:0";
+	};
 };
   
   opengl = {
