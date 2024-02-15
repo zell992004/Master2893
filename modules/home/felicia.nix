@@ -15,7 +15,7 @@
     ++ [ (import ./neofetch) ]
     ++ [ (import ./starship) ]
     ++ [ (import ./wlogout) ]
-    ++ [ (import ./packagep) ]
+    ++ [ (import ./packagef) ]
     ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
@@ -45,7 +45,6 @@
         neofetch.enable = true;
         starship.enable= true;
         wlogout.enable = true;
-        packagep.enable = true;
         packagef.enable = true;
         gaming.enable = true;
         gtk.enable = true;

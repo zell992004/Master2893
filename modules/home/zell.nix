@@ -46,7 +46,6 @@
         starship.enable= true;
         wlogout.enable = true;
         packagep.enable = true;
-        packagef.enable = true;
         gaming.enable = true;
         gtk.enable = true;
         firefox.enable = true;
