@@ -15,12 +15,11 @@ in {
     enableCompletion = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
-   # prezto.tmux = {
-   #     enable = true;
-   #     autoStartLocal = true;
-   #     autoStartRemote = true;
-   #     defaultSessionName = "home";
-   #   };
+    prezto = {
+        enable = true;
+        tmux.autoStartLocal = true;
+        tmux.autoStartRemote = true;
+      };
     initExtra = ''
       if [[ -o interactive ]]; then
       export GITHUB_TOKEN=$(cat /run/user/1000/secrets/myservice/my_subdir/my_secret)

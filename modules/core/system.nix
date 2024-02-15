@@ -31,6 +31,7 @@ in{
     qt5ct
     libva
     libGL
+    zsh-prezto
 ];
 
   time.timeZone = "America/New_York";
