@@ -13,14 +13,14 @@
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs; };
     users.zell = {
-      imports = [ (import ./../home/zell.nix) ];
+      imports = [ (import ./../home/home.nix) ];
       home.username = "zell";
       home.homeDirectory = "/home/zell";
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;
     };
     users.felicia = {
-      imports = [ (import ./../home/felicia.nix) ];
+      imports = [ (import ./../home/home.nix) ];
       home.username = "felicia";
       home.homeDirectory = "/home/felicia";
       home.stateVersion = "23.11";

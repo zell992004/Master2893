@@ -14,10 +14,10 @@
     ++ [ (import ./starship) ]
     ++ [ (import ./wlogout) ]
     ++ [ (import ./packagef) ]
-    ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
+    ++ [ (import ./tmux)]
     ;
     config.modules = {
         foot.enable = true;
@@ -26,7 +26,7 @@
         starship.enable= true;
         packagef.enable = true;
         gaming.enable = true;
-        tmux.enable = true;
         firefox.enable = true;
+        tmux.enable = true;
     };
 }
