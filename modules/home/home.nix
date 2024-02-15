@@ -16,7 +16,6 @@
     ++ [ (import ./starship) ]
     ++ [ (import ./wlogout) ]
     ++ [ (import ./packagep) ]
-    ++ [ (import ./packagep) ]
     ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]

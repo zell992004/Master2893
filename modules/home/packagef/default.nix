@@ -38,7 +38,6 @@
       bore-cli
       discord
       eza
-      zsh-prezto
     ];
     };
 }
