@@ -16,6 +16,7 @@
     ++ [ (import ./starship) ]
     ++ [ (import ./wlogout) ]
     ++ [ (import ./packagep) ]
+    ++ [ (import ./packagep) ]
     ++ [ (import ./tmux)]
     ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
@@ -46,6 +47,7 @@
         starship.enable= true;
         wlogout.enable = true;
         packagep.enable = true;
+        packagef.enable = true;
         gaming.enable = true;
         gtk.enable = true;
         firefox.enable = true;
