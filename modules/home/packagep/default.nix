@@ -45,6 +45,8 @@
       gcc
       tree-sitter
       nodejs
+      zsh-prezto
+
     ];
     };
 }

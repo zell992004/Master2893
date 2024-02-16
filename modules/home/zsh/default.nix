@@ -15,19 +15,17 @@ in {
     enableCompletion = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
-    prezto = {
-        enable = true;
-        tmux.autoStartLocal = true;
-        tmux.autoStartRemote = true;
-      };
+  #  prezto = {
+  #      enable = true;
+  #      tmux.autoStartLocal = true;
+  #      tmux.autoStartRemote = true;
+  #    };
     initExtra = ''
-      if [[ -o interactive ]]; then
-      export GITHUB_TOKEN=$(cat /run/user/1000/secrets/myservice/my_subdir/my_secret)
-      fi
+    ZSH_TMUX_AUTOSTART=true
     '';
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = with pkgs; [ "tmux" ];
 
     };
     shellAliases = {
